@@ -6,14 +6,14 @@ import { MdBedroomParent } from "react-icons/md";
 import Cookies from "universal-cookie";
 
 function Habitaciones() {
-  const baseUrl = "https://localhost:44348/Hoteles";
-  const baseUrlHabitaciones = "https://localhost:44348/Habitaciones/";
+  const baseUrl = "https://pruebaapisahl.azurewebsites.net/Hoteles";
+  const baseUrlHabitaciones = "https://pruebaapisahl.azurewebsites.net/Habitaciones/";
   const [data, setData] = useState([]);
 
   const cookies = new Cookies();
   var logueado = cookies.get("id");
   if (logueado == null) {
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://ahl-proyecto.azurewebsites.net/login";
   }
   const [modalInsertar, setModalInsertar] = useState(false);
   const [modalEditar, setModalEditar] = useState(false);
