@@ -6,13 +6,13 @@ import { MdLocalHotel } from "react-icons/md";
 import Cookies from "universal-cookie";
 
 function Home() {
-  const baseUrl = "https://localhost:44348/Hoteles";
+  const baseUrl = "https://pruebaapisahl.azurewebsites.net/Hoteles";
   const [data, setData] = useState([]);
   const cookies = new Cookies();
 
   var logueado = cookies.get("id");
   if (logueado == null) {
-    window.location.href = "http://localhost:3000/login";
+    window.location.href = "https://ahl-proyecto.azurewebsites.net/login";
   }
 
   const [modalInsertar, setModalInsertar] = useState(false);
