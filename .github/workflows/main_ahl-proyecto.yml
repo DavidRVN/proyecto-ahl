@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'ahl-proyecto'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B637B83752C043D2A10D449E67219546 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8B3C053ADF1446EBAD2D2B6BB8391437 }}
           package: .
