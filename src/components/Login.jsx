@@ -6,7 +6,7 @@ import Cookies from 'universal-cookie';
 
 function Login(props) {
 
-    const baseUrl = "https://localhost:44348/Usuarios";
+    const baseUrl = "https://pruebaapisahl.azurewebsites.net/Usuarios";
     const cookies = new Cookies();
     
   const [usuarioSeleccionado, setHotelSeleccionado] = useState({
