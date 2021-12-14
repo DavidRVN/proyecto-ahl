@@ -59,7 +59,7 @@ function Login(props) {
     <div class="col-6 mx-auto p-4 m-5 border-light shadow-sm">
     <div className="login">
       <div class="container">
-        <h2 style={{ padding: "25px" }}>Iniciar sessión</h2>
+        <h2 style={{ padding: "25px" }}>Iniciar sesión</h2>
         <div class="form-style">
        
             <div class="form-group pb-6">
