@@ -7,10 +7,11 @@ function Navigation(props) {
 
   var loggueado = cookies.get("id");
 
+  //
   const cerrarSesion = () => {
     cookies.remove("id");
     window.location.href ='https://ahl-proyecto.azurewebsites.net/Login';
-  };
+  }; 
 
   return (
     <div className="navigation">
