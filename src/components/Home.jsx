@@ -64,6 +64,12 @@ function Home() {
 
   const peticionPut = async () => {
     hotelSeleccionado.disponible = parseInt(hotelSeleccionado.disponible);
+    var estrellas = document.getElementById("estrellas").value;
+    hotelSeleccionado.categoriaHotel = estrellas;
+
+    var disponibilidad = document.getElementById("disponibilidadH").value;
+    hotelSeleccionado.disponible = disponibilidad;
+
     await axios
       .put(baseUrl + "/" + hotelSeleccionado.idHotel, hotelSeleccionado)
       .then((response) => {
@@ -337,23 +343,26 @@ function Home() {
               <br />
               <label>Categoría</label>
               <br />
-              <input
-                type="text"
-                className="form-control"
-                name="categoriaHotel"
-                onChange={handleChange}
-                value={hotelSeleccionado && hotelSeleccionado.categoriaHotel}
-              />
+              <select className="form-control" id="estrellas">
+                <option style={{ color: "#808080" }} value={"select"}>
+                  Selecciona categoría
+                </option>
+                <option value="5">5 Estrellas</option>
+                <option value="4">4 Estrellas</option>
+                <option value="3">3 Estrellas</option>
+                <option value="2">2 Estrellas</option>
+                <option value="1">1 Estrellas</option>
+              </select>
               <br />
               <label>Disponibilidad</label>
               <br />
-              <input
-                type="text"
-                className="form-control"
-                name="disponible"
-                onChange={handleChange}
-                value={hotelSeleccionado && hotelSeleccionado.disponible}
-              />
+<select id="disponibilidadH" className="form-control">
+                  <option style={{ color: "#808080" }} value={"select"}>
+                    Selecciona disponibilidad
+                  </option>
+                  <option value="1">Disponible</option>
+                  <option value="0">No Disponible</option>
+                </select>
               <br />
             </div>
           </ModalBody>
