@@ -9,7 +9,7 @@ function Navigation(props) {
 
   const cerrarSesion = () => {
     cookies.remove("id");
-    props.history.push("/src/index");
+    window.location.href ='https://ahl-proyecto.azurewebsites.net/Login';
   };
 
   return (
