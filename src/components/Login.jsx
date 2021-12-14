@@ -40,7 +40,7 @@ function Login(props) {
             cookies.set('apellido',respuesta.apellido, {path:'/'});
             cookies.set('usuario',respuesta.usuario, {path:'/'}); 
             alert("Bienvenido" + respuesta.nombre+ " "+ respuesta.apellido);
-            window.location.href ='http://localhost:3000/';
+            window.location.href ='https://ahl-proyecto.azurewebsites.net/';
         }
         else{
             alert("Usuario o contraseña incorrectos");
